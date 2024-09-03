@@ -1,234 +1,106 @@
-<!DOCTYPE html>
 <html>
 <head>
-    <title>Course Registration Form</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            margin: 0;
-            padding: 0;
-        }
-        .container {
-            width: 50%;
-            margin: auto;
-            background-color: #fff;
-            padding: 20px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        h2 {
-            text-align: center;
-            color: #333;
-        }
-        .form-group {
-            margin-bottom: 15px;
-        }
-        .form-group label {
-            display: block;
-            margin-bottom: 5px;
-        }
-        .form-group input, .form-group select {
-            width: 100%;
-            padding: 8px;
-            box-sizing: border-box;
-        }
-        .error {
-            color: red;
-            font-size: 0.9em;
-        }
-        .submit-btn {
-            background-color: #333;
-            color: #fff;
-            padding: 10px 15px;
-            border: none;
-            cursor: pointer;
-            width: 100%;
-        }
-        .submit-btn:hover {
-            background-color: #555;
-        }
-    </style>
+    <title>College Registration Form</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <h2>Course Registration Form</h2>
-        <form id="registrationForm">
-            <div class="form-group">
-                <label for="student_name">Student Name:</label>
-                <input type="text" id="student_name" name="student_name">
-                <span class="error" id="nameError"></span>
-            </div>
-            <div class="form-group">
-                <label for="rollno">Roll No:</label>
-                <input type="text" id="rollno" name="rollno">
-                <span class="error" id="rollnoError"></span>
-            </div>
-            <div class="form-group">
-                <label for="gender">Gender:</label>
-                <select id="gender" name="gender">
-                    <option value="">Select</option>
-                    <option value="Male">Male</option>
-                    <option value="Female">Female</option>
-                    <option value="Other">Other</option>
-                </select>
-                <span class="error" id="genderError"></span>
-            </div>
-            <div class="form-group">
-                <label for="year">Year:</label>
-                <input type="text" id="year" name="year">
-                <span class="error" id="yearError"></span>
-            </div>
-            <div class="form-group">
-                <label for="department">Department:</label>
-                <input type="text" id="department" name="department">
-                <span class="error" id="departmentError"></span>
-            </div>
-            <div class="form-group">
-                <label for="section">Section:</label>
-                <input type="text" id="section" name="section">
-                <span class="error" id="sectionError"></span>
-            </div>
-            <div class="form-group">
-                <label for="mobile_no">Mobile No:</label>
-                <input type="text" id="mobile_no" name="mobile_no">
-                <span class="error" id="mobileError"></span>
-            </div>
-            <div class="form-group">
-                <label for="email">E-Mail ID:</label>
-                <input type="email" id="email" name="email">
-                <span class="error" id="emailError"></span>
-            </div>
-            <div class="form-group">
-                <label for="address">Address:</label>
-                <input type="text" id="address" name="address">
-                <span class="error" id="addressError"></span>
-            </div>
-            <div class="form-group">
-                <label for="city">City:</label>
-                <input type="text" id="city" name="city">
-                <span class="error" id="cityError"></span>
-            </div>
-            <div class="form-group">
-                <label for="country">Country:</label>
-                <input type="text" id="country" name="country">
-                <span class="error" id="countryError"></span>
-            </div>
-            <div class="form-group">
-                <label for="pincode">Pincode:</label>
-                <input type="text" id="pincode" name="pincode">
-                <span class="error" id="pincodeError"></span>
-            </div>
-            <button type="button" class="submit-btn" onclick="validateForm()">Submit</button>
-        </form>
-    </div>
+    <h1>College Registration Form</h1>
+    <form id="RegistrationForm">
+	<br><br>
+        <div>
+            <label for="regNo">Registration Number:</label>
+            <input type="number" id="regNo" name="regNo" required>
+        </div>
+        <br>
 
+        <div>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+        <br>
+
+        <div>
+            <label for="year">Year:</label>
+            <select id="year" name="year" required>
+                <option value="" disabled selected>Select Year</option>
+                <option value="1st">1</option>
+                <option value="2nd">2</option>
+                <option value="3rd">3</option>
+                <option value="4th">4</option>
+            </select>
+        </div>
+        <br>
+
+	<div>
+    	<label>Gender:</label>
+    	<input type="radio" id="male" name="gender" value="male" required>
+    	<label for="male">Male</label>
+    	<input type="radio" id="female" name="gender" value="female" required>
+    	<label for="female">Female</label>
+        <input type="radio" id="other" name="gender" value="other" required>
+    	<label for="other">Other</label>
+	</div>
+
+        <br>
+
+        <div>
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob" required>
+        </div>
+        <br>
+
+        <div>
+            <label for="academicYear">Academic Year:</label>
+            <input type="text" id="academicYear" name="academicYear" required>
+        </div>
+        <br>
+
+        <div>
+            <label for="subjectCode">Subject Code:</label>
+            <input type="text" id="subjectCode" name="subjectCode" required>
+        </div>
+        <br>
+
+        <div>
+            <label for="subjectTitle">Subject Title:</label>
+            <input type="text" id="subjectTitle" name="subjectTitle" required>
+        </div>
+        <br>
+
+        <div>
+            <label for="credits">Credits:</label>
+            <input type="number" id="credits" name="credits" required>
+        </div>
+        <br>
+
+
+        <button type="submit">Submit</button>
+        <button type="reset">Clear</button>
+	<br><br>
+    </form>
     <script>
-        function validateForm() {
-            let isValid = true;
+        document.getElementById('registrationForm').addEventListener('submit', function(event) {
+    const regNo = document.getElementById('regNo').value;
+    const subjectCode = document.getElementById('subjectCode').value;
 
-            // Clear previous error messages
-            document.querySelectorAll('.error').forEach(error => error.textContent = '');
+    const regNoPattern = /^\d{9}$/;
+    const subjectCodePattern = /^[A-Za-z]{2}\d{5}$/;
 
-            // Validate Student Name
-            const studentName = document.getElementById('student_name').value;
-            if (studentName === '') {
-                document.getElementById('nameError').textContent = 'Student Name is required';
-                isValid = false;
-            }
+    if (!regNoPattern.test(regNo)) {
+        window.alert('Registration number must be a 9-digit number.');
+        event.preventDefault();
+        return;
+    }
 
-            // Validate Roll No
-            const rollNo = document.getElementById('rollno').value;
-            if (rollNo === '') {
-                document.getElementById('rollnoError').textContent = 'Roll No is required';
-                isValid = false;
-            }
+    if (!subjectCodePattern.test(subjectCode)) {
+        window.alert('Subject Code must be 7 characters long, with the first 2 characters as letters followed by 5 numbers.');
+        event.preventDefault();
+        return;
+    }
 
-            // Validate Gender
-            const gender = document.getElementById('gender').value;
-            if (gender === '') {
-                document.getElementById('genderError').textContent = 'Gender is required';
-                isValid = false;
-            }
-
-            // Validate Year
-            const year = document.getElementById('year').value;
-            if (year === '') {
-                document.getElementById('yearError').textContent = 'Year is required';
-                isValid = false;
-            }
-
-            // Validate Department
-            const department = document.getElementById('department').value;
-            if (department === '') {
-                document.getElementById('departmentError').textContent = 'Department is required';
-                isValid = false;
-            }
-
-            // Validate Section
-            const section = document.getElementById('section').value;
-            if (section === '') {
-                document.getElementById('sectionError').textContent = 'Section is required';
-                isValid = false;
-            }
-
-            // Validate Mobile No
-            const mobileNo = document.getElementById('mobile_no').value;
-            const mobilePattern = /^[0-9]{10}$/;
-            if (mobileNo === '') {
-                document.getElementById('mobileError').textContent = 'Mobile No is required';
-                isValid = false;
-            } else if (!mobilePattern.test(mobileNo)) {
-                document.getElementById('mobileError').textContent = 'Invalid Mobile No';
-                isValid = false;
-            }
-
-            // Validate E-Mail ID
-            const email = document.getElementById('email').value;
-            const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
-            if (email === '') {
-                document.getElementById('emailError').textContent = 'E-Mail ID is required';
-                isValid = false;
-            } else if (!emailPattern.test(email)) {
-                document.getElementById('emailError').textContent = 'Invalid E-Mail ID';
-                isValid = false;
-            }
-
-            // Validate Address
-            const address = document.getElementById('address').value;
-            if (address === '') {
-                document.getElementById('addressError').textContent = 'Address is required';
-                isValid = false;
-            }
-
-            // Validate City
-            const city = document.getElementById('city').value;
-            if (city === '') {
-                document.getElementById('cityError').textContent = 'City is required';
-                isValid = false;
-            }
-
-            // Validate Country
-            const country = document.getElementById('country').value;
-            if (country === '') {
-                document.getElementById('countryError').textContent = 'Country is required';
-                isValid = false;
-            }
-
-            // Validate Pincode
-            const pincode = document.getElementById('pincode').value;
-            const pincodePattern = /^[0-9]{6}$/;
-            if (pincode === '') {
-                document.getElementById('pincodeError').textContent = 'Pincode is required';
-                isValid = false;
-            } else if (!pincodePattern.test(pincode)) {
-                document.getElementById('pincodeError').textContent = 'Invalid Pincode';
-                isValid = false;
-            }
-
-            if (isValid) {
-                alert('Form submitted successfully!');
-            }
-        }
+    // If both checks pass
+    alert('Form submitted successfully!');
+});
     </script>
 </body>
 </html>
